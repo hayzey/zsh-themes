@@ -1,4 +1,6 @@
 local separator="⋅"
+# local git_dirty_symbol="\uE0A0" # Looks like a git branch
+local git_dirty_symbol="⚡︎"
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 local user_host="%B%(!.%{$fg[red]%}.%{$fg[yellow]%})%n%b %{$fg[white]%}%{$separator%}%{$reset_color%}"
 local user_symbol='%{$fg[magenta]%}%(!.#.$)'
@@ -15,7 +17,7 @@ RPROMPT="%B${return_code}%b"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[white]%}%{$separator%}%{$reset_color%} %{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ↯ %{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} %{$git_dirty_symbol%} %{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[cyan]%}"
 
 ZSH_THEME_HG_PROMPT_PREFIX="$ZSH_THEME_GIT_PROMPT_PREFIX"
